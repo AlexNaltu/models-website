@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-secondary;
+  }
+}
+
+.icon {
+  @apply cursor-pointer;
+}
+
+.menu-link {
+  @apply text-white no-underline flex items-center justify-center w-12 h-12 relative rounded-lg;
+}
+.menu-link:hover,
+.menu-link:focus,
+.menu-link.active {
+  outline: 0;
+}
+.menu-link:hover span,
+.menu-link:focus span,
+.menu-link.active span {
+  @apply opacity-100 scale-100;
+}
+.icon {
+  @apply hover:text-quinary transition duration-100 ease-in bg-secondary p-2 rounded-full;
+}
+.menu-link span {
+  @apply hidden sm:block font-bold absolute bg-primary whitespace-nowrap origin-[center_left] opacity-0 transition-[0.15s]  px-4 py-2 rounded-r-xl scale-0 left-[calc(100%_+_1.5rem)] before:content-[""] before:block before:w-3 before:h-3 before:absolute before:bg-primary before:left-[-5px] before:rounded-[3px] before:top-2/4;
+}
+.menu-link span:before {
+  transform: translatey(-50%) rotate(45deg);
+}
+
+.custom-shadow {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.home-bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.021), rgba(0, 0, 0, 0.655)),
+    url("/herobg.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
